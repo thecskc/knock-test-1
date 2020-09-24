@@ -18,7 +18,25 @@
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
- 
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178923443-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-178923443-1');
+  </script>
+
+
+  <script>(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+          0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+    for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+          MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+  mixpanel.init("a99acc807093d50b563902e715669d9f", {batch_requests: true})</script>
+
+
 </head>
 <body>
   <div class="page-wrapper">
@@ -31,7 +49,7 @@
           application</strong>.
           <br>Share your screen with multiple people, highlight, and edit text or code.</div>
         <div class="hero-button-row">
-          <a href="https://krishchelikavada857035.typeform.com/to/zdFuQZ3X" target="_blank" class="button w-inline-block">
+          <a href="https://krishchelikavada857035.typeform.com/to/zdFuQZ3X" target="_blank" class="button w-inline-block" onclick="clickedButton()">
             <div>Get Started</div>
           </a>
         </div>
@@ -87,12 +105,12 @@
               <div class="plan-features">
                 <div>Free to host and join screenshare sessions!</div>
               </div>
-              <a href="https://krishchelikavada857035.typeform.com/to/zdFuQZ3X" data-membership-id="5c61ea9d7579e5001704b4eb" target="_blank" class="button-2 full-button secondary-button w-inline-block">
+              <a href="https://krishchelikavada857035.typeform.com/to/zdFuQZ3X" data-membership-id="5c61ea9d7579e5001704b4eb" target="_blank"
+                 class="button-2 full-button secondary-button w-inline-block" onclick="clickedButtonPricing()">
                 <div>Get Started</div>
               </a>
             </div>
           </div>
-          <div class="pricing-disclaimer">*Price does not include additional taxes, fees, and surcharges. To learn more, please <a href="https://www.uberconference.com/contact" class="link-2">contact our sales team</a>.<br></div>
         </div>
       </div>
       <div class="container"></div>
@@ -111,4 +129,21 @@
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
+
+
+<script type="application/javascript">
+
+  function clickedButton(event){
+    event.preventDefault();
+    mixpanel.track("Learn More", {"area": "CTA"});
+  }
+
+  function clickedButtonPricing(event){
+    event.preventDefault();
+    mixpanel.track("Learn More", {"area": "Pricing"});
+  }
+
+
+
+</script>
 </html>
